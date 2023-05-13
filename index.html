@@ -27,9 +27,7 @@
             <li class="list-group-item p-3">C++</li>
             <li class="list-group-item p-3">Swift</li>
             <li class="list-group-item p-3">C</li>
-  
         </ul>
-
     </div>    
 </body>
 <script>
@@ -37,21 +35,20 @@
     addEventListener('input',filterList);
 
     function filterList(){
-        const searchInput= document.querySelector
-        ('#search-input');
-        const Filter = searchInput.value.toLowerCase();
-        const listItems= document.querySelectorAll('list-group-item');
+        const searchInput = document.querySelector('#search-input');
+        const filter =searchInput.value.toLowerCase();
+        const listItems= document.querySelectorAll('.list-group-item');
 
         listItems.forEach((item)=>{
-            let text=item.textContent;
-            if(text.toLocaleLowerCase().includes
-            (Filter.toLocaleLowerCase())){
+            let text= item.textContent;
+            if(text.toLowerCase().includes(filter.toLowerCase())){
                 item.style.display = '';
             }
             else{
-                item.style.display ='none';
+                item.style.display = 'none';
             }
         });
+        
     }
 </script>
 </html>
